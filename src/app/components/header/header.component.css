@@ -1,0 +1,36 @@
+.header {
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 20px 10px;
+}
+.header .navBar {
+   float: left;
+   color: black;
+   text-align: center;
+   padding: 12px;
+   text-decoration: none;
+   font-size: 18px;
+   line-height: 25px;
+   border-radius: 4px;
+   padding-left: 15% ;
+ }
+img{
+  right: 0;
+  width: 10%;
+  height: 10%;
+  padding: 8px ;
+  float: left;
+  position: relative;
+}
+.account{
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  padding-right: 5% ;
+  float: right;
+  position: relative;
+}
