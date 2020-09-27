@@ -1,0 +1,28 @@
+.personal{
+  padding-top: 5%;
+  font-size: 300%;
+}
+.tableDiv{
+padding-bottom: 5%;
+}
+.dib{
+  padding-top: 5%;
+}
+.btn-info{
+  font-size:90% ;
+}
+.vertical-text {
+  transform: rotate(270deg);
+  transform-origin: right;
+  font-size: 250%;
+  padding-right: 15%;
+  padding-bottom: 15%;
+}
+.br{
+  color : red;
+  border : 1px solid black;
+  margin-bottom : 5%;
+  margin-left: 25%;
+  margin-right: 2%;
+
+}

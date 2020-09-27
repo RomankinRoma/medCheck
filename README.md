@@ -1,3 +1,9 @@
+#Minimalism
+
+Прошу строго не судить дизайн\
+Еще в проекте не использованы Input/Output так как не нужны были\
+(либо я просто не смог реализовать так как хотел)
+
 # MedCheckup
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.

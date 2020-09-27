@@ -1,6 +1,6 @@
 .header {
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: white;
   padding: 20px 10px;
 }
 .header .navBar {
@@ -12,7 +12,7 @@
    font-size: 18px;
    line-height: 25px;
    border-radius: 4px;
-   padding-left: 15% ;
+   padding-left: 10% ;
  }
 img{
   right: 0;

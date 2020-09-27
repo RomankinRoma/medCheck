@@ -1,0 +1,15 @@
+  <div class="row">
+    <div class="col">
+      <h3>City:</h3>
+      <h3>Street:</h3>
+      <h3>Age:</h3>
+      <h3>Gender:</h3>
+    </div>
+    <div class="col">
+  <input type="text" name="city" [(ngModel)]="city"><br>
+  <input type="text"  name="street" [(ngModel)]="street"><br>
+  <input type="number" name="age" [(ngModel)]="age"><br>
+  <input type="text"  name="gender" [(ngModel)]="gender"><br>
+  </div>
+  </div>
+<button (click)="setValues(city,street,age,gender)">Login</button>

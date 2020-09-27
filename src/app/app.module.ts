@@ -13,6 +13,7 @@ import { AboutComponent } from './components/about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {FormsModule} from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {FormsModule} from '@angular/forms';
     BrowseComponent,
     OrderComponent,
     AccountComponent,
-    AboutComponent
+    AboutComponent,
+    LoginComponent
   ],
     imports: [
         BrowserModule,
