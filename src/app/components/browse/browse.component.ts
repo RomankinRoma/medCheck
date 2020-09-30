@@ -1,4 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterContentChecked,
+  AfterContentInit,
+  AfterViewChecked,
+  AfterViewInit,
+  Component,
+  DoCheck,
+  OnChanges,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -6,7 +16,8 @@ import {Router} from '@angular/router';
   templateUrl: './browse.component.html',
   styleUrls: ['./browse.component.css']
 })
-export class BrowseComponent implements OnInit {
+export class BrowseComponent implements OnInit, OnChanges, DoCheck, AfterContentInit,
+  AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
   constructor(private router: Router) { }
 
