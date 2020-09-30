@@ -4,28 +4,28 @@
     <form>
       <div class="form-row">
         <div class="col">
-          <input type="text" class="form-control" placeholder="First name">
+          <input type="text" class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" placeholder="First name">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Last name">
+          <input type="text" class="form-control" [(ngModel)]="surname" [ngModelOptions]="{standalone: true}" placeholder="Last name">
         </div>
       </div>
     </form>
       <form style="padding: 2%">
         <div class="form-row">
           <div class="col">
-            <input type="text" class="form-control" placeholder="City">
+            <input type="text" class="form-control" [(ngModel)]="city" [ngModelOptions]="{standalone: true}" placeholder="City">
           </div>
           <div class="col">
-            <input type="text" class="form-control" placeholder="Street">
+            <input type="text" class="form-control" [(ngModel)]="street" [ngModelOptions]="{standalone: true}" placeholder="Street">
           </div>
           <div class="col">
-            <input type="text" class="form-control" placeholder="House">
+            <input type="text" class="form-control" [(ngModel)]="house" [ngModelOptions]="{standalone: true}" placeholder="House">
           </div>
         </div>
       </form>
       <div class="input-group mb-3">
-        <select class="custom-select" id="inputGroupSelect02">
+        <select class="custom-select" [(ngModel)]="gender" [ngModelOptions]="{standalone: true}" id="inputGroupSelect02">
           <option selected>Choose...</option>
           <option value="1">Male</option>
           <option value="2">Female</option>
@@ -39,13 +39,13 @@
     <form>
       <div class="form-row">
         <div class="col">
-          <input type="number" class="form-control" placeholder="Day">
+          <input type="number" class="form-control" [(ngModel)]="day" [ngModelOptions]="{standalone: true}" placeholder="Day">
         </div>
         <div class="col">
-          <input type="number" class="form-control" placeholder="Month">
+          <input type="number" class="form-control" [(ngModel)]="month" [ngModelOptions]="{standalone: true}" placeholder="Month">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Time">
+          <input type="text" class="form-control" [(ngModel)]="time" [ngModelOptions]="{standalone: true}" placeholder="Time">
         </div>
       </div>
     </form>
@@ -70,4 +70,4 @@
     </div>
   </div>
 </div>
-<button type="button" class="btn btn-outline-success btn-lg btn-block">MAKE ORDER</button>
+<button type="button" (click)="setDate(day,month,time)" class="btn btn-outline-success btn-lg btn-block">MAKE ORDER</button>

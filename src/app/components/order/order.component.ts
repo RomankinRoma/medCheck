@@ -7,9 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderComponent implements OnInit {
 
+  checked: boolean;
+  name: string;
+  surname: string;
+  city: string;
+  street: string;
+  house: string;
+  gender: string;
+  date: string;
+  day: number;
+  month: number;
+  time: number;
   constructor() { }
 
   ngOnInit(): void {
+    console.log('AppComponent:OnInit');
   }
+  ngOnChanges() {    		console.log('AppComponent:OnChanges');  }
+  ngDoCheck() {         	console.log('AppComponent:DoCheck');  }
+  ngAfterContentInit() {    console.log('AppComponent:AfterContentInit');  }
+  ngAfterContentChecked() { console.log('AppComponent:AfterContentChecked'); }
+  ngAfterViewInit() {       console.log('AppComponent:AfterViewInit');  }
+  ngAfterViewChecked() {    console.log('AppComponent:AfterViewChecked');  }
+  ngOnDestroy() {    		console.log('AppComponent:OnDestroy');  }
+
+  setDate(day: number, month: number, time: number){
+    this.date = day + '.' + month + '.' + time;
+}
 
 }
