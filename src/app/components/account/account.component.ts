@@ -1,6 +1,13 @@
 import {
+  AfterContentChecked,
+  AfterContentInit, AfterViewChecked,
+  AfterViewInit,
   Component,
+  DoCheck,
+  OnChanges, OnDestroy,
   OnInit,
+  Output,
+  ViewChild
 } from '@angular/core';
 import {LoginComponent} from '../login/login.component';
 
@@ -9,8 +16,8 @@ import {LoginComponent} from '../login/login.component';
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css']
 })
-export class AccountComponent implements OnInit {
-  city: string;
+export class AccountComponent implements OnInit, OnChanges, DoCheck, AfterContentInit,
+  AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {city: string;
   street: string;
   age: number;
   gender: string;
@@ -23,6 +30,14 @@ export class AccountComponent implements OnInit {
   ngOnInit(): void {
     console.log('AppComponent:OnInit');
   }
+  ngOnChanges() {    		console.log('AppComponent:OnChanges');  }
+  ngDoCheck() {         	console.log('AppComponent:DoCheck');  }
+  ngAfterContentInit() {    console.log('AppComponent:AfterContentInit');  }
+  ngAfterContentChecked() { console.log('AppComponent:AfterContentChecked'); }
+  ngAfterViewInit() {       console.log('AppComponent:AfterViewInit');  }
+  ngAfterViewChecked() {    console.log('AppComponent:AfterViewChecked');  }
+  ngOnDestroy() {    		console.log('AppComponent:OnDestroy');  }
+
   div1Function(){
     this.div1 = true;
     this.div2 = false;
