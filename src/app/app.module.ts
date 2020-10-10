@@ -15,6 +15,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import {OrderPipe} from './pipes/OrderPipe';
+import {Discount} from './pipes/Discount';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {OrderPipe} from './pipes/OrderPipe';
     AccountComponent,
     AboutComponent,
     LoginComponent,
-    OrderPipe
+    OrderPipe,
+    Discount
   ],
     imports: [
         BrowserModule,

@@ -19,6 +19,8 @@ export class OrderComponent implements OnInit, OnChanges, DoCheck, AfterContentI
   AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
   checked: boolean;
+  warHero:boolean;
+  doctor:boolean;
   med: boolean;
   food: boolean;
   other: boolean;
