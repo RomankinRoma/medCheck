@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  legInfo = 'legal information';
+  datePriv = 'date privacy';
+  other = 'other links';
+  cont = 'contact';
   constructor() { }
 
   ngOnInit(): void {

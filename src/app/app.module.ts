@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import {OrderPipe} from './pipes/OrderPipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoginComponent } from './components/login/login.component';
     OrderComponent,
     AccountComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
+    OrderPipe
   ],
     imports: [
         BrowserModule,

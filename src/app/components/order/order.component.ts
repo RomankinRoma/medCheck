@@ -19,6 +19,9 @@ export class OrderComponent implements OnInit, OnChanges, DoCheck, AfterContentI
   AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
   checked: boolean;
+  med: boolean;
+  food: boolean;
+  other: boolean;
   name: string;
   surname: string;
   city: string;
@@ -29,6 +32,7 @@ export class OrderComponent implements OnInit, OnChanges, DoCheck, AfterContentI
   day: number;
   month: number;
   time: number;
+  money = 5000;
   constructor() { }
 
   ngOnInit(): void {

@@ -6,8 +6,6 @@ import {
   DoCheck,
   OnChanges, OnDestroy,
   OnInit,
-  Output,
-  ViewChild
 } from '@angular/core';
 import {LoginComponent} from '../login/login.component';
 
