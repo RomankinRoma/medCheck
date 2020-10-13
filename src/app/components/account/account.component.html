@@ -1,16 +1,15 @@
 <div class="row">
   <div class="col"></div>
   <div class="col">
-    <h1 class="text-right"><a routerLink="personal" class="text-dark text-decoration-none">Personal information</a></h1>
+    <h1 class="text-right"><a (click)="showPersonal()" routerLink="personal" class="text-dark text-decoration-none">Personal information</a></h1>
   </div>
   <div class="col">
-    <h1 class="text-center"><a routerLink="orders" class="text-dark text-decoration-none">My orders</a></h1>
+    <h1 class="text-center"><a (click)="showOrders()" routerLink="orders" class="text-dark text-decoration-none">My orders</a></h1>
   </div>
   <div class="col">
     <h1 class="text-left"><a class="text-dark text-decoration-none">Results of analyzes</a></h1>
   </div>
 </div>
-<router-outlet></router-outlet>
-
-
+<app-personal-information *ngIf="personal" [city]="city" [street]="street" [age]="age" [gender]="gender"></app-personal-information>
+<app-my-orders *ngIf="orders"></app-my-orders>
 
