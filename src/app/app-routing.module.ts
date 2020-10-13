@@ -15,6 +15,7 @@ const routes: Routes = [
   {path: 'account' , component: AccountComponent},
   {path: 'service', component: DiscountComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'account', loadChildren: () => import('./components/account/account.module').then(allModule => allModule.AccountModule)},
 ];
 
 @NgModule({

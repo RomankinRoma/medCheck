@@ -1,15 +1,17 @@
   <div class="row">
     <div class="col">
-      <h3>City:</h3>
-      <h3>Street:</h3>
-      <h3>Age:</h3>
-      <h3>Gender:</h3>
+      <div class="col">
+        <input type="text" class="form-control" [(ngModel)]="city" [ngModelOptions]="{standalone: true}" placeholder="City">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" [(ngModel)]="street" [ngModelOptions]="{standalone: true}" placeholder="Street">
+      </div>
+      <div class="col">
+      <input type="text" class="form-control" [(ngModel)]="gender" [ngModelOptions]="{standalone: true}" placeholder="Gender">
     </div>
-    <div class="col">
-  <input type="text" name="city" [(ngModel)]="city"><br>
-  <input type="text"  name="street" [(ngModel)]="street"><br>
-  <input type="number" name="age" [(ngModel)]="age"><br>
-  <input type="text"  name="gender" [(ngModel)]="gender"><br>
+      <div class="col">
+        <input type="text" class="form-control" [(ngModel)]="age" [ngModelOptions]="{standalone: true}" placeholder="Age">
+      </div>
   </div>
   </div>
-<button (click)="setValues(city,street,age,gender)">Login</button>
+<button  class="btn btn-outline-success btn-lg btn-block">Go to Login</button>

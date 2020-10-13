@@ -16,6 +16,7 @@ import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import {OrderPipe} from './pipes/OrderPipe';
 import {Discount} from './pipes/Discount';
+import {AccountModule} from './components/account/account.module';
 
 @NgModule({
   declarations: [
@@ -25,13 +26,13 @@ import {Discount} from './pipes/Discount';
     DiscountComponent,
     BrowseComponent,
     OrderComponent,
-    AccountComponent,
     AboutComponent,
     LoginComponent,
     OrderPipe,
-    Discount
+    Discount,
   ],
     imports: [
+        AccountModule,
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,

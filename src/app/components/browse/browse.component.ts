@@ -16,13 +16,6 @@ export class BrowseComponent implements OnInit {
   ngOnInit(): void {
     console.log('AppComponent:OnInit');
   }
-  ngOnChanges() {    		console.log('AppComponent:OnChanges');  }
-  ngDoCheck() {         	console.log('AppComponent:DoCheck');  }
-  ngAfterContentInit() {    console.log('AppComponent:AfterContentInit');  }
-  ngAfterContentChecked() { console.log('AppComponent:AfterContentChecked'); }
-  ngAfterViewInit() {       console.log('AppComponent:AfterViewInit');  }
-  ngAfterViewChecked() {    console.log('AppComponent:AfterViewChecked');  }
-  ngOnDestroy() {    		console.log('AppComponent:OnDestroy');  }
 
 
   gotoOrder(){
