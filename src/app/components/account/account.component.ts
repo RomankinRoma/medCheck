@@ -1,10 +1,5 @@
 import {
-  AfterContentChecked,
-  AfterContentInit, AfterViewChecked,
-  AfterViewInit,
   Component,
-  DoCheck,
-  OnChanges, OnDestroy,
   OnInit,
 } from '@angular/core';
 import {LoginComponent} from '../login/login.component';
@@ -14,8 +9,7 @@ import {LoginComponent} from '../login/login.component';
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css']
 })
-export class AccountComponent implements OnInit, OnChanges, DoCheck, AfterContentInit,
-  AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {city: string;
+export class AccountComponent implements OnInit{city: string;
   street: string;
   age: number;
   gender: string;

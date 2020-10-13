@@ -1,12 +1,5 @@
 import {
-  AfterContentChecked,
-  AfterContentInit,
-  AfterViewChecked,
-  AfterViewInit,
   Component,
-  DoCheck,
-  OnChanges,
-  OnDestroy,
   OnInit
 } from '@angular/core';
 
@@ -15,8 +8,7 @@ import {
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.css']
 })
-export class OrderComponent implements OnInit, OnChanges, DoCheck, AfterContentInit,
-  AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class OrderComponent implements OnInit {
 
   checked: boolean;
   warHero:boolean;
@@ -40,13 +32,6 @@ export class OrderComponent implements OnInit, OnChanges, DoCheck, AfterContentI
   ngOnInit(): void {
     console.log('AppComponent:OnInit');
   }
-  ngOnChanges() {    		console.log('AppComponent:OnChanges');  }
-  ngDoCheck() {         	console.log('AppComponent:DoCheck');  }
-  ngAfterContentInit() {    console.log('AppComponent:AfterContentInit');  }
-  ngAfterContentChecked() { console.log('AppComponent:AfterContentChecked'); }
-  ngAfterViewInit() {       console.log('AppComponent:AfterViewInit');  }
-  ngAfterViewChecked() {    console.log('AppComponent:AfterViewChecked');  }
-  ngOnDestroy() {    		console.log('AppComponent:OnDestroy');  }
 
   setDate(day: number, month: number, time: number){
     this.date = day + '.' + month + '.' + time;
