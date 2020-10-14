@@ -9,7 +9,6 @@ const routes: Routes = [
   path: '', component: AccountComponent,
   children: [
   {path: 'personal', component: PersonalInformationComponent},
-  {path: '', redirectTo: 'personal', pathMatch: 'full'},
     {path: 'orders', component: MyOrdersComponent},
 ]
   }

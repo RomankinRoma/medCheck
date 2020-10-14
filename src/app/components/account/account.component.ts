@@ -17,22 +17,22 @@ export class AccountComponent implements OnInit{
   age=23;
   street='Manas';
   date=Date;
+  personal:boolean;
+  orders:boolean;
   order=[new Order("Аркадий Паровозоv",21, "№12", new this.date),new Order("Аркадий Паровозоv v2",22, "№14", new this.date)]
   constructor() { }
 
   ngOnInit(): void {
-
+    this.personal=true;
+    this.orders=false;
   }
-
-  personal=true;
-  orders=false;
 
   showOrders(){
     this.orders=true;
     this.personal=false;
   }
   showPersonal(){
-    this.orders=false;
     this.personal=true;
+    this.orders=false;
   }
 }
