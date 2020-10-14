@@ -3,6 +3,7 @@ import {
   OnInit, Output, ViewChild
 } from '@angular/core';
 import {LoginComponent} from '../login/login.component';
+import {Order} from '../../models/Order';
 
 @Component({
   selector: 'app-account',
@@ -15,6 +16,8 @@ export class AccountComponent implements OnInit{
   gender='Male';
   age=23;
   street='Manas';
+  date=Date;
+  order=[new Order("Аркадий Паровозоv",21, "№12", new this.date),new Order("Аркадий Паровозоv v2",22, "№14", new this.date)]
   constructor() { }
 
   ngOnInit(): void {

@@ -11,5 +11,5 @@
   </div>
 </div>
 <app-personal-information *ngIf="personal" [city]="city" [street]="street" [age]="age" [gender]="gender"></app-personal-information>
-<app-my-orders *ngIf="orders"></app-my-orders>
+<app-my-orders [order]="order" *ngIf="orders"></app-my-orders>
 
