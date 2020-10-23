@@ -72,7 +72,7 @@
       <input type="checkbox" [(ngModel)]="doctor" class="custom-control-input" id="customCheck5">
       <label class="custom-control-label" for="customCheck5">Med. worker</label>
     </div>
-    <div class="form-group">
+    <div class="form-group" style="padding-right: 2%; ">
       <label for="exampleFormControlTextarea1" class="exam">Comments</label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
@@ -82,4 +82,4 @@
 </div>
 <br>
 <h1 class="text-center text-info">Pay:{{ money | orderPipe:med:food:other |discount:warHero:doctor }}</h1>
-<button type="button" (click)="setDate(day,month,time)" class="btn btn-outline-success btn-lg btn-block">MAKE ORDER</button>
+<button type="button" (click)="addOrder(setDate(day,month,time))" class="btn btn-outline-success btn-lg btn-block">MAKE ORDER</button>

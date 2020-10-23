@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {User} from '../../../models/User';
 
 @Component({
   selector: 'app-personal-information',
@@ -6,23 +7,10 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./personal-information.component.css']
 })
 export class PersonalInformationComponent implements OnInit {
-  @Input()
-  city: string;
-  @Input()
-  street: string;
-  @Input()
-  age: number;
-  @Input()
-  gender: string;
+  user = new User('Rakhmatulla', 19, 'Almaty', 'Jubanova', 'Male', null);
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  getInfo(c: string, s: string, g: string, a: number){
-    this.city = c;
-    this.gender = g;
-    this.age = a;
-    this.street = s;
-  }
 }

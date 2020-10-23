@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 import {LoginComponent} from '../login/login.component';
 import {Order} from '../../models/Order';
+import {UserService} from '../../services/user-service.service';
 
 @Component({
   selector: 'app-account',
@@ -19,12 +20,13 @@ export class AccountComponent implements OnInit{
   date=Date;
   personal:boolean;
   orders:boolean;
-  order=[new Order("Аркадий Паровозоv",21, "№12", new this.date),new Order("Аркадий Паровозоv v2",22, "№14", new this.date)]
-  constructor() { }
+  order:Order[];
+  constructor(private userService:UserService) { }
 
   ngOnInit(): void {
     this.personal=true;
     this.orders=false;
+    this.order=this.userService.getOrders();
   }
 
   showOrders(){

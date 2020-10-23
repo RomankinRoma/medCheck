@@ -2,6 +2,7 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import {UserService} from '../../services/user-service.service';
 
 @Component({
   selector: 'app-order',
@@ -24,17 +25,19 @@ export class OrderComponent implements OnInit {
   gender: string;
   date: string;
   day: number;
-  month: number;
+  month: string;
   time: number;
   money = 5000;
-  constructor() { }
+  constructor(private userService:UserService) { }
 
   ngOnInit(): void {
     console.log('AppComponent:OnInit');
   }
 
-  setDate(day: number, month: number, time: number){
-    this.date = day + '.' + month + '.' + time;
-}
-
+  setDate(day: number, month: string, time: number){
+    return this.date = 'Mon '+this.month+' '+this.day+' 2020 07:07:07';
+  }
+  addOrder(date:string){
+    this.userService.addOrder("",date,12,"23");
+  }
 }

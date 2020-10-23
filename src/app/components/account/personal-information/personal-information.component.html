@@ -5,12 +5,22 @@
       <div class="row dib">
         <div class="col">
           <h2 class="text-center">
+            Name
+          </h2>
+        </div>
+        <div class="col">
+          <h2 class="font-weight-normal">{{user.name}}</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2 class="text-center">
             Address
           </h2>
         </div>
         <div class="col">
-          <h2 class="font-weight-normal">City: {{city}}</h2>
-          <h2 class="font-weight-normal">Street: {{street}}</h2>
+          <h2 class="font-weight-normal">City: {{user.city}}</h2>
+          <h2 class="font-weight-normal">Street: {{user.street}}</h2>
         </div>
       </div>
       <div class="row">
@@ -20,9 +30,8 @@
           </h2>
         </div>
         <div class="col">
-          <h2 class="font-weight-normal">{{age}}</h2>
+          <h2 class="font-weight-normal">{{user.age}}</h2>
         </div>
-
       </div>
       <div class="row">
         <div class="col">
@@ -31,7 +40,7 @@
           </h2>
         </div>
         <div class="col">
-          <h2 class="font-weight-normal">{{gender}}</h2>
+          <h2 class="font-weight-normal">{{user.gender}}</h2>
         </div>
       </div>
       <div class="row">

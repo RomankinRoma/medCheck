@@ -1,12 +1,19 @@
+
 export class Order {
-  date: Date;
+  date: string;
   therapist: string;
   orderNumber: number;
   hospital: string;
-  constructor(th: string, oN: number, h: string, d: Date) {
-    this.therapist = th;
+  medicine: boolean;
+  food: boolean;
+  warHero: boolean;
+  medWorker: boolean;
+ comment: string;
+  constructor(th: string, oN: number, h: string, d: string) {
+    this.therapist = 'Someone';
     this.date = d;
-    this.hospital = h;
-    this.orderNumber = oN;
+    this.hospital = "13";
+    this.orderNumber = 12;
   }
+
 }
