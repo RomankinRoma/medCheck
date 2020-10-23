@@ -16,4 +16,7 @@ export class Order {
     this.orderNumber = 12;
   }
 
+  public toString(){
+    return "Therapist:"+this.therapist+" Date:"+this.date.slice(4,16)+" OrderNumber:"+this.orderNumber+" Hospital:"+this.hospital+"\n";
+  }
 }

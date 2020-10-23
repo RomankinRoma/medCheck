@@ -18,6 +18,7 @@ import {OrderPipe} from './pipes/OrderPipe';
 import {Discount} from './pipes/Discount';
 import {AccountModule} from './components/account/account.module';
 import {UserService} from './services/user-service.service';
+import {LoggingService} from './services/logging-service.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import {UserService} from './services/user-service.service';
         MatToolbarModule,
         FormsModule
     ],
-  providers: [UserService],
+  providers: [UserService,LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
