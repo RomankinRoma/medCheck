@@ -6,16 +6,17 @@ import {OrderComponent} from './components/order/order.component';
 import {AccountComponent} from './components/account/account.component';
 import {DiscountComponent} from './components/discount/discount.component';
 import {LoginComponent} from './components/login/login.component';
+import {UserGuardService} from './services/user-guard-service';
 
 const routes: Routes = [
   {path: '' , component: BrowseComponent},
   {path: 'home' , component: BrowseComponent},
   {path: 'about' , component: AboutComponent},
-  {path: 'order' , component: OrderComponent},
+  {path: 'order' , component: OrderComponent, canDeactivate: [UserGuardService]},
   {path: 'account' , component: AccountComponent},
   {path: 'service', component: DiscountComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'account', loadChildren: () => import('./components/account/account.module').then(allModule => allModule.AccountModule)},
+  {path: 'account', loadChildren: () => import('./components/account/account.module').then(allModule => allModule.AccountModule), canLoad: [UserGuardService]},
 ];
 
 @NgModule({
