@@ -27,7 +27,7 @@ export class UserGuardService implements CanActivate, CanLoad, CanDeactivate<any
 
     this.logService.consoleLog('Component that can see only authorized user');
 
-    if (!this.userService.isLogin()) {
+    if (!this.userService.isLoggedIn) {
       this.router.navigate(['login']);
       return false;
     }
@@ -39,7 +39,7 @@ export class UserGuardService implements CanActivate, CanLoad, CanDeactivate<any
 
     this.logService.consoleLog('Here we use can load');
 
-    if (!this.userService.isLogin()) {
+    if (!this.userService.isLoggedIn) {
       this.router.navigate(['login']);
       return false;
     }
@@ -71,7 +71,7 @@ export class UserGuardService implements CanActivate, CanLoad, CanDeactivate<any
   canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean{
     this.logService.consoleLog('Component that can see only authorized user(Child)');
 
-    if (!this.userService.isLogin()) {
+    if (!this.userService.isLoggedIn) {
       this.router.navigate(['login']);
       return false;
     }

@@ -1,17 +1,60 @@
-  <div class="row">
+<div *ngIf="register" class="row text-center">
+  <div class="col">
     <div class="col">
-      <div class="col">
-        <input type="text" class="form-control" [(ngModel)]="city" [ngModelOptions]="{standalone: true}" placeholder="City">
-      </div>
-      <div class="col">
-        <input type="text" class="form-control" [(ngModel)]="street" [ngModelOptions]="{standalone: true}" placeholder="Street">
-      </div>
-      <div class="col">
-      <input type="text" class="form-control" [(ngModel)]="gender" [ngModelOptions]="{standalone: true}" placeholder="Gender">
+      <label>
+        <input type="text" class="form-control" [(ngModel)]="fullname" name="fullname" placeholder="Full Name">
+      </label>
     </div>
-      <div class="col">
-        <input type="text" class="form-control" [(ngModel)]="age" [ngModelOptions]="{standalone: true}" placeholder="Age">
-      </div>
+    <div class="col">
+      <label>
+        <input type="text" class="form-control" [(ngModel)]="city" name="city" placeholder="City">
+      </label>
+    </div>
+    <div class="col">
+      <label>
+        <input type="text" class="form-control" [(ngModel)]="street" name="street" placeholder="Street">
+      </label>
+    </div>
+    <div class="col">
+      <label>
+        <input type="text" class="form-control" [(ngModel)]="gender" name="gender" placeholder="Gender">
+      </label>
+    </div>
+    <div class="col">
+      <label>
+        <input type="number" class="form-control" [(ngModel)]="age" name="age" placeholder="Age">
+      </label>
+    </div>
+    <div class="col">
+      <label>
+        <input type="text" class="form-control" [(ngModel)]="password" name="rPassword" placeholder="Password">
+      </label>
+    </div>
+    <div class="col">
+      <label>
+        <button class="btn btn-block btn-lg btn-primary" (click)="register(fullname,age,city,street,gender,password)">
+          Register
+        </button>
+        <br/>
+      </label>
+    </div>
   </div>
+  <div class="col">
+    <div class="col">
+      <label>
+        <input type="text" class="form-control" [(ngModel)]="loginLog" name="logLogin" placeholder="Login">
+      </label>
+    </div>
+    <div class="col">
+      <label>
+        <input type="password" class="form-control" [(ngModel)]="logPassword" name="password" placeholder="Password">
+      </label>
+    </div>
+    <div class="col">
+      <label>
+        <button class="btn btn-block btn-lg btn-primary" (click)="login(loginLog,logPassword)">Login</button>
+      </label>
+    </div>
   </div>
-<button  class="btn btn-outline-success btn-lg btn-block">Go to Login</button>
+</div>
+

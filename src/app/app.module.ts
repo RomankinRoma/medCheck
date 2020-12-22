@@ -8,7 +8,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DiscountComponent } from './components/discount/discount.component';
 import { BrowseComponent } from './components/browse/browse.component';
 import { OrderComponent } from './components/order/order.component';
-import { AccountComponent } from './components/account/account.component';
 import { AboutComponent } from './components/about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -20,6 +19,7 @@ import {AccountModule} from './components/account/account.module';
 import {UserService} from './services/user-service.service';
 import {LoggingService} from './services/logging-service.service';
 import {UserGuardService} from './services/user-guard-service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,8 @@ import {UserGuardService} from './services/user-guard-service';
         AppRoutingModule,
         BrowserAnimationsModule,
         MatToolbarModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule,
     ],
   providers: [UserService, LoggingService, UserGuardService],
   bootstrap: [AppComponent]

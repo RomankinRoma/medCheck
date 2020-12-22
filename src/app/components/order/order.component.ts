@@ -12,11 +12,11 @@ import {UserService} from '../../services/user-service.service';
 export class OrderComponent implements OnInit {
 
   checked: boolean;
-  warHero:boolean;
-  doctor:boolean;
-  med: boolean;
-  food: boolean;
-  other: boolean;
+  warHero = false;
+  doctor = false;
+  med = false;
+  food = false;
+  other = false;
   name: string;
   surname: string;
   city: string;
@@ -28,16 +28,27 @@ export class OrderComponent implements OnInit {
   month: string;
   time: number;
   money = 5000;
-  constructor(private userService:UserService) { }
+  comments: string;
+
+  constructor(private userService: UserService) {
+  }
 
   ngOnInit(): void {
     console.log('AppComponent:OnInit');
   }
 
-  setDate(day: number, month: string, time: number){
-    return this.date = 'Mon '+this.month+' '+this.day+' 2020 07:07:07';
+  // tslint:disable-next-line:typedef
+  setDate(day: number, month: string, time: number) {
+    return this.date = 'Mon ' + this.month + ' ' + this.day + ' 2020 07:07:07';
   }
-  addOrder(date:string){
-    this.userService.addOrder("",date,12,"23");
+
+  // tslint:disable-next-line:typedef
+  addOrder(date: string,
+           medicine: boolean,
+           food: boolean,
+           warHero: boolean,
+           medWorker: boolean,
+           comment: string) {
+    this.userService.addOrder('', date, 12, '23', medicine, food, warHero, medWorker, comment);
   }
 }
